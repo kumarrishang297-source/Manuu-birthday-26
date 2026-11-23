@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10070d">
+<title>For My Manisha — A Birthday Surprise</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#10070d;--bg2:#1b0a12;--wine:#5d1026;--red:#d83b5c;--rose:#ff9daf;--cream:#fff0e9;--muted:#d9b8c1;--gold:#e8c68a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 15% 10%,#54162a66,transparent 38%),radial-gradient(ellipse at 85% 55%,#4b102566,transparent 35%),linear-gradient(145deg,#10070d,#160811 55%,#090609)}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.topbar{position:absolute;top:0;left:0;width:100%;padding:22px 7%;display:flex;justify-content:space-between;align-items:center;z-index:5}
+.brand{font-family:'Cormorant Garamond',serif;font-size:25px;color:#ffdbe2;letter-spacing:1px}
+.nav{display:flex;gap:25px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#e5c5cc}
+.nav a:hover{color:var(--rose)}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:125px 22px 80px;position:relative;isolation:isolate}
+.hero:before{content:"";position:absolute;width:min(76vw,700px);aspect-ratio:1;border:1px solid #e8a4b21c;border-radius:50%;z-index:-1;box-shadow:0 0 0 35px #e8a4b208,0 0 0 75px #e8a4b205}
+.hero-inner{max-width:850px}
+.eyebrow{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--gold)}
+.hero h1{font:600 clamp(58px,11vw,112px)/.92 'Cormorant Garamond',serif;margin:25px 0 20px;color:#fff0ed}
+.hero h1 span{display:block;color:var(--rose);font-style:italic}
+.hero-line{font:400 clamp(20px,3vw,28px)/1.55 'Cormorant Garamond',serif;color:#f3dce0;max-width:720px;margin:0 auto}
+.hero-sub{font-size:14px;color:#cbaeb7;letter-spacing:1px;margin:20px 0 35px}
+.primary-btn,.outline-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:100px;cursor:pointer;transition:.25s ease;font-weight:600;letter-spacing:.3px}
+.primary-btn{border:1px solid #f28da2;background:linear-gradient(135deg,#8f1938,#d83b5c);color:white;box-shadow:0 10px 35px #d83b5c35}
+.primary-btn:hover{transform:translateY(-3px);box-shadow:0 15px 40px #d83b5c55}
+.outline-btn{border:1px solid #bd7b8b66;background:#ffffff08;color:#ffe4e9}
+.outline-btn:hover{background:#ffffff12;transform:translateY(-2px)}
+.scroll-cue{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:3px;color:#b9949e;text-transform:uppercase}
+.scroll-cue:after{content:"";display:block;width:1px;height:35px;background:linear-gradient(var(--rose),transparent);margin:12px auto 0}
+.section{padding:105px 22px;max-width:1050px;margin:auto}
+.section-label{text-align:center;color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;margin-bottom:14px}
+.section-title{text-align:center;font:600 clamp(38px,6vw,58px)/1.05 'Cormorant Garamond',serif;color:#ffe5e7;margin:0 0 25px}
+.intro{text-align:center;max-width:680px;margin:0 auto;color:var(--muted);font:400 21px/1.8 'Cormorant Garamond',serif}
+.divider{display:flex;align-items:center;gap:15px;justify-content:center;margin:35px auto;color:var(--rose)}
+.divider:before,.divider:after{content:"";height:1px;width:65px;background:linear-gradient(90deg,transparent,#b85b72)}
+.divider:after{transform:rotate(180deg)}
+.letter-card{max-width:760px;margin:0 auto;padding:clamp(28px,6vw,58px);border:1px solid #d48b9b38;border-radius:8px;background:linear-gradient(145deg,#ffffff0d,#ffffff04);box-shadow:0 25px 80px #0005;position:relative}
+.letter-card:before{content:"“";position:absolute;top:-27px;left:25px;font:100px 'Cormorant Garamond',serif;color:#d65a76;opacity:.55}
+.letter-card p{font:400 20px/1.85 'Cormorant Garamond',serif;color:#f1dce0;margin:0 0 18px}
+.letter-card .sign{color:var(--rose);font-style:italic;margin:28px 0 0}
+.note-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:42px}
+.note{border:1px solid #d48b9b2b;background:#ffffff07;padding:25px 18px;text-align:center;border-radius:8px}
+.note .symbol{font-size:25px;margin-bottom:12px}
+.note h3{font:600 25px 'Cormorant Garamond',serif;color:#ffdce3;margin:0 0 8px}
+.note p{font-size:13px;line-height:1.7;color:#cdb1ba;margin:0}
+.music-wrap{max-width:680px;margin:0 auto;text-align:center;border:1px solid #d48b9b38;background:#ffffff08;padding:35px 22px;border-radius:10px}
+.music-wrap p{color:#d8bac2;font-size:14px;line-height:1.7}
+.music-frame{width:min(100%,560px);aspect-ratio:16/9;border:0;border-radius:8px;margin-top:22px}
+.final-section{padding-top:90px;padding-bottom:120px;text-align:center}
+.final-card{border:1px solid #d48b9b55;background:linear-gradient(145deg,#2b0c18,#140810);padding:clamp(30px,6vw,60px) 22px;border-radius:12px;box-shadow:0 25px 90px #0007}
+.final-card .tiny{font-size:11px;letter-spacing:4px;color:var(--gold);text-transform:uppercase}
+.final-card h2{font:600 clamp(37px,7vw,62px) 'Cormorant Garamond',serif;color:#ffe2e6;margin:15px 0}
+.final-card p{color:#d9bdc5;font:20px 'Cormorant Garamond',serif;margin:0 auto 25px}
+#surpriseReveal{display:none;margin:35px auto 0;max-width:720px;animation:reveal .9s ease both}
+@keyframes reveal{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:none}}
+.ring{font-size:78px;filter:drop-shadow(0 0 18px #e8c68a);animation:ring 1.8s ease-in-out infinite alternate}
+@keyframes ring{to{transform:scale(1.1);filter:drop-shadow(0 0 28px #ffe3a4)}}
+.surprise-title{font:600 clamp(34px,6vw,52px) 'Cormorant Garamond',serif;color:#ffcad5;margin:12px 0 22px}
+.surprise-photo{display:block;width:min(100%,520px);max-height:680px;object-fit:cover;margin:0 auto;border:1px solid #e8a2b3;border-radius:8px;box-shadow:0 25px 70px #0009}
+.photo-caption{font:italic 19px 'Cormorant Garamond',serif;color:#f0cbd4;margin:18px 0 35px}
+.reveal-letter{max-width:680px;margin:0 auto;text-align:left;padding:clamp(25px,5vw,45px);background:#fffaf7;color:#40202b;border-radius:5px;box-shadow:0 20px 60px #0006}
+.reveal-letter h3{text-align:center;font:600 34px 'Cormorant Garamond',serif;color:#8d2742;margin:0 0 24px}
+.reveal-letter p{font:400 19px/1.8 'Cormorant Garamond',serif;color:#57323e;margin:0 0 16px}
+.reveal-letter .sign{color:#9d2e4b;font-style:italic;margin-top:25px}
+.birthday-end{font:600 clamp(32px,6vw,52px)/1.15 'Cormorant Garamond',serif;color:#ffcad5;margin:42px auto 0}
+footer{text-align:center;padding:30px 15px 45px;color:#98747e;font-size:11px;letter-spacing:2px}
+.heart{position:fixed;bottom:-30px;z-index:0;pointer-events:none;color:#ef6682;opacity:0;animation:rise 8s linear forwards}
+@keyframes rise{0%{transform:translateY(0) scale(.7);opacity:0}12%{opacity:.35}85%{opacity:.25}100%{transform:translateY(-110vh) translateX(35px) scale(1.2);opacity:0}}
+
+
+.website-content{display:none}
+.website-content.is-open{display:block;animation:siteFade .9s ease both}
+@keyframes siteFade{from{opacity:0}to{opacity:1}}
+.welcome-gate{min-height:100svh;display:grid;place-items:center;padding:25px;background:radial-gradient(ellipse at 50% 35%,#57172b 0,#1b0a12 42%,#090609 100%);position:relative;overflow:hidden}
+.welcome-gate:before,.welcome-gate:after{content:"";position:absolute;width:300px;height:300px;border:1px solid #f5b4c122;border-radius:50%;box-shadow:0 0 0 30px #f5b4c20b,0 0 0 65px #f5b4c207}
+.welcome-gate:before{top:-130px;left:-100px}.welcome-gate:after{right:-130px;bottom:-150px}
+.welcome-card{max-width:720px;text-align:center;position:relative;z-index:1;padding:clamp(25px,6vw,65px);border:1px solid #d48b9b55;background:#ffffff08;box-shadow:0 25px 90px #0008;border-radius:12px}
+.gate-kicker{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}
+.gate-heart{font-size:55px;color:var(--rose);margin:20px 0 5px}
+.welcome-card h1{font:600 clamp(48px,10vw,86px)/.95 'Cormorant Garamond',serif;margin:8px 0 18px;color:#fff0ed}
+.welcome-card h1 em{display:block;color:var(--rose)}
+.welcome-card p{font:400 21px/1.7 'Cormorant Garamond',serif;color:#e8cbd2;max-width:540px;margin:0 auto 28px}
+.gate-foot{margin-top:24px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#a9828d}
+.memory-section{padding-top:90px}
+.memory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:42px auto 0;max-width:850px}
+.memory-card{margin:0;background:linear-gradient(145deg,#ffffff12,#ffffff05);border:1px solid #d48b9b42;padding:12px 12px 17px;border-radius:9px;box-shadow:0 18px 45px #0005;overflow:hidden}
+.memory-card img{display:block;width:100%;height:clamp(220px,34vw,390px);object-fit:cover;border-radius:5px}
+.memory-card p{font:italic 21px/1.4 'Cormorant Garamond',serif;color:#ffdce3;text-align:center;margin:15px 5px 2px}
+.memory-footnote{font:italic 22px 'Cormorant Garamond',serif;color:var(--rose);text-align:center;margin:35px auto 0}
+
+.music-dock{position:fixed;right:18px;bottom:18px;z-index:20;width:250px;padding:10px;background:#1b0a12ee;border:1px solid #d48b9b66;border-radius:12px;box-shadow:0 12px 40px #0009;backdrop-filter:blur(12px);display:none}
+.music-dock-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;color:#ffdce3;font-size:12px}
+.music-dock iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:7px}
+.music-dock .dock-close{border:0;background:transparent;color:#ffdce3;font-size:18px;cursor:pointer;padding:0 4px}
+.hero-music{margin-top:14px}
+@media(max-width:700px){.music-dock{right:10px;bottom:10px;width:190px}.music-dock-top{font-size:10px}}
+
+@media(max-width:700px){.nav{gap:12px;font-size:9px}.topbar{padding:18px 5%}.brand{font-size:21px}.note-grid{grid-template-columns:1fr}.section{padding:78px 18px}.hero{padding-top:125px}.hero:before{width:90vw}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="welcome-gate" id="welcomeGate">
+ <div class="welcome-card">
+  <div class="gate-kicker">A tiny universe, made only for you</div>
+  <div class="gate-heart">♡</div>
+  <h1>For My <em>Manisha</em></h1>
+  <p>Somewhere inside this little world, there are memories, words, and a surprise waiting just for you.</p>
+  <button class="primary-btn" id="enterWorld">Click here baby to open our little world ♡</button>
+  <div class="gate-foot">made with love · for my Manu</div>
+ </div>
+</div>
+<div id="websiteContent" class="website-content" aria-hidden="true">
+<nav class="topbar">
+ <div class="brand">M ♡ R</div>
+ <div class="nav"><a href="#our-memories">Memories</a><a href="#letter">A letter</a><a href="#little-things">Little things</a><a href="#song">Our song</a></div>
+</nav>
+
+<header class="hero">
+ <div class="hero-inner">
+  <div class="eyebrow">A birthday page made with love</div>
+  <h1>For My <span>Manisha</span></h1>
+  <p class="hero-line">For the girl who loves me endlessly, drives me crazy sometimes, but still makes my world a beautiful place.</p>
+  <p class="hero-sub">My Manu · My Kuchchu · My favourite pareshani ❤️</p>
+  <a class="primary-btn" href="#letter">Come in, birthday girl <span>♡</span></a>
+  <div class="hero-music"><button class="outline-btn" id="startMusicTop">Start our song ♫</button></div>
+ </div>
+ <div class="scroll-cue">A little surprise awaits</div>
+</header>
+
+<main>
+
+<section class="section memory-section" id="our-memories">
+ <div class="section-label">Four little pieces of us</div>
+ <h2 class="section-title">Our little memories 📸</h2>
+ <p class="intro">Every picture has a story. These are a few moments I want to keep close.</p>
+ <div class="memory-grid">
+  <article class="memory-card"><img src="assets/photo1.jpeg" alt="Manisha, memory one"><p>Maana ki thodi nakhrebaaz ho… par meri pyaari si Manisha ho. ❤️</p></article>
+  <article class="memory-card"><img src="assets/photo2.jpeg" alt="Manisha, memory two"><p>Meri sir pe nachne wali… phir bhi sabse special. 🥰</p></article>
+  <article class="memory-card"><img src="assets/photo3.jpeg" alt="A memory together, photo three"><p>Khoon chusne wali, lekin dil ke sabse kareeb. 😂❤️</p></article>
+  <article class="memory-card"><img src="assets/photo4.jpeg" alt="A memory together, photo four"><p>Aur dimaag garam karne wali… I still love you, meri Kuchchu! ❤️</p></article>
+ </div>
+ <p class="memory-footnote">Love you, meri sir pe nachne wali, khoon chusne wali aur dimaag garam karne wali. ❤️</p>
+</section>
+
+<section class="section" id="letter">
+ <div class="section-label">A few words from my heart</div>
+ <h2 class="section-title">To my favourite person</h2>
+ <p class="intro">Some people make life brighter just by being in it. You are that person for me, Manisha.</p>
+ <div class="divider">♡</div>
+ <div class="letter-card">
+  <p>My dearest Manisha,</p>
+  <p>You are the girl who can make me smile with the smallest things, who loves me endlessly, and who can also trouble me like nobody else. Sometimes you drive me crazy, but even those little moments become memories I end up smiling about.</p>
+  <p>You are my pyaar, my favourite pareshani, my Manu, and my Kuchchu. I hope you never forget how special you are and how much happiness you deserve. May this new year of your life bring you beautiful surprises, confidence, laughter, and countless reasons to smile.</p>
+  <p>And baby, baat maan bhi liya karo pleaseee! 🥺 You know na, I love you so much.</p>
+  <p class="sign">With all my love,<br>Rishang ❤️</p>
+ </div>
+</section>
+
+<section class="section" id="little-things">
+ <div class="section-label">The things that make you you</div>
+ <h2 class="section-title">My Manu, my Kuchchu</h2>
+ <div class="note-grid">
+  <article class="note"><div class="symbol">♡</div><h3>Your love</h3><p>The warmth and care you bring into the little moments.</p></article>
+  <article class="note"><div class="symbol">✧</div><h3>Your mischief</h3><p>Even when you trouble me, you somehow make me smile.</p></article>
+  <article class="note"><div class="symbol">☾</div><h3>Your smile</h3><p>One of my favourite things, and a reason to celebrate you.</p></article>
+ </div>
+</section>
+
+<section class="section" id="song">
+ <div class="section-label">A song to stay with your story</div>
+ <h2 class="section-title">Let it play as you read</h2>
+ <div class="music-wrap">
+  <div style="font:italic 29px 'Cormorant Garamond',serif;color:#ffcad5">Alfaaz ♫</div>
+  <p>Start the song once. The small player will stay on screen while you scroll through the letter and all the way to your final surprise.</p>
+  <button class="outline-btn" id="playMusic">Start / show music player ▶</button>
+  <p class="small-note" style="font-size:12px;color:#b995a0;margin-top:14px">Your browser requires one tap to begin playback. Keep this page open as you read.</p>
+ </div>
+</section>
+
+<section class="section final-section" id="surprise">
+ <div class="final-card">
+  <div class="tiny">Keep this one for last</div>
+  <h2>One last thing, birthday girl…</h2>
+  <p>There is something special waiting just for you.</p>
+  <button class="primary-btn" id="surpriseButton">One surprise for u ❤️</button>
+  <div id="surpriseReveal">
+   <div class="ring">💍</div>
+   <h2 class="surprise-title">For my Manisha, my Kuchchu ❤️</h2>
+   <img class="surprise-photo" src="assets/manisha-surprise.jpeg" alt="A special memory for Manisha">
+   <p class="photo-caption">One precious memory, kept close to my heart. ❤️</p>
+   <div class="reveal-letter">
+    <h3>A letter, just for you</h3>
+    <p>My dearest Manisha,</p>
+    <p>Happy birthday, mera gudda! I wish I could wrap all the happiness in the world into one little gift for you. You deserve to feel loved, valued, and celebrated—not just today, but every single day.</p>
+    <p>Thank you for being the girl who loves me, laughs with me, and sometimes gives me a hard time too. You make ordinary days feel special. Keep smiling, keep chasing the things that make you happy, and always believe in yourself.</p>
+    <p>Baby, baat maan bhi liya karo pleaseee! 🥺 You know na, I love you so much. No matter how much you trouble me, you will always be my pyaar and my favourite pareshani.</p>
+    <p>I hope this little surprise becomes one more sweet memory from your birthday. Have the most beautiful year ahead, Manisha.</p>
+    <p class="sign">Forever yours,<br>Rishang ❤️</p>
+   </div>
+   <div class="birthday-end">Once again, a very happy birthday, mera gudda! 🎂❤️</div>
+  </div>
+ </div>
+</section>
+</main>
+
+<div class="music-dock" id="musicDock" aria-label="Background music player">
+ <div class="music-dock-top"><span>♫ Alfaaz — playing while you read</span><button class="dock-close" id="hideMusic" aria-label="Hide music player">×</button></div>
+ <div id="musicPlayer"></div>
+</div>
+
+<footer>MADE WITH LOVE · JUST FOR MANISHA · ❤️</footer>
+</div>
+
+<script>
+document.getElementById('surpriseButton').addEventListener('click',function(){
+ const reveal=document.getElementById('surpriseReveal');
+ reveal.style.display='block';
+ this.textContent='Surprise unlocked ❤️';
+ this.disabled=true;
+ reveal.scrollIntoView({behavior:'smooth',block:'start'});
+});
+
+document.getElementById('enterWorld').addEventListener('click',function(){
+ const gate=document.getElementById('welcomeGate');
+ const content=document.getElementById('websiteContent');
+ gate.style.display='none';
+ content.classList.add('is-open');
+ content.setAttribute('aria-hidden','false');
+ startBirthdayMusic();
+ window.scrollTo({top:0,behavior:'instant'});
+});
+
+function startBirthdayMusic(){
+ const holder=document.getElementById('musicPlayer');
+ const dock=document.getElementById('musicDock');
+ if(!holder.querySelector('iframe')){
+  const frame=document.createElement('iframe');
+  frame.src='https://www.youtube-nocookie.com/embed/cQq6iLF66Gc?autoplay=1&playsinline=1&rel=0';
+  frame.title='Alfaaz music player';
+  frame.allow='autoplay; encrypted-media; picture-in-picture';
+  frame.allowFullscreen=true;
+  holder.appendChild(frame);
+ }
+ dock.style.display='block';
+}
+document.getElementById('playMusic').addEventListener('click',startBirthdayMusic);
+document.getElementById('startMusicTop').addEventListener('click',function(){
+ startBirthdayMusic();
+ document.getElementById('letter').scrollIntoView({behavior:'smooth'});
+});
+document.getElementById('hideMusic').addEventListener('click',function(){
+ const dock=document.getElementById('musicDock');
+ // Hide only the mini-player UI; keep the iframe alive so playback can continue.
+ dock.style.display='none';
+});
+function makeHeart(){
+ const h=document.createElement('span');
+ h.className='heart';h.textContent=Math.random()>.5?'♥':'♡';
+ h.style.left=Math.random()*100+'vw';
+ h.style.fontSize=(12+Math.random()*16)+'px';
+ h.style.animationDuration=(7+Math.random()*5)+'s';
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),12500);
+}
+setInterval(makeHeart,1500);
+</script>
+</body>
+</html>
